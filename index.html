@@ -4,47 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styles CSS</title>
-<style>
-    body{
-        background-image: url("tulipkeukenhof.jpg.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        font-family: sans-serif;
-        margin: 0;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    header,
-    nav,
-    article,
-    footer {
-        color: beige;
-        padding: 20px;
-        border: 3px solid beige;
-        border-radius: 5px;
-        margin: 10px;
-    }
-    header{
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        text-align: center;
-        box-shadow: beige;
-    }
-    nav,
-    article,
-    footer {
-        box-shadow: beige;
-    }
-</style>
+    <style>
+        body {
+            background-image: url("tulipkeukenhof.jpg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        header,
+        nav,
+        article,
+        footer {
+            color: beige;
+            padding: 20px;
+            border: 3px solid beige;
+            border-radius: 5px;
+            margin: 10px;
+            box-shadow: 0 0 15px beige; 
+        }
+        
+        header {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        
+        
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px; 
+        }
+        
+        nav {
+            flex: 250px; 
+        }
+
+        .articles {
+            display: flex; 
+            flex-direction: column; 
+            gap: 20px; 
+        }
+        
+    </style>
+</head>
 <body>
-    <body>
     <header>
         <h1>Header</h1>
     </header>
 
-    <div class="container">
+    <div class="flex-container">
         <nav>
             <h2>Navigation</h2>
             <ul>
@@ -73,6 +88,5 @@
     <footer>
         <p>Footer</p>
     </footer>
-</head>
 </body>
 </html>
