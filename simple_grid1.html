@@ -1,60 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styles CSS</title>
-    <style>
-        body {
-            background-image: url("tulipkeukenhof.jpg.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            font-family: sans-serif;
-            font-family: sans-serif;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        article {
-            display: flex
-            flex: 500px;
-            flex-direction: row;
-            gap: 20px; 
-            color: beige;
-            padding: 20px;
-            border: 3px solid beige;
-            border-radius: 5px;
-            margin: 10px;
-        }   
-        .flex-container {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 20px; 
-        }   
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsif Card Layout</title>
+<style>
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
 
-        @media (max-width: 900px) {
-  .flex-container {
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #1E1E1E;
+    border: 2px solid #FF0077;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex: 1 1 300px;
+    max-width: 450px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+
+.container {
     flex-direction: column;
-    }
-    </style>
+    align-items: center;
+}
+
+
+
+.card {
+    flex: none;
+    width: 100%;
+    max-width: 500px;
+}
+
+}
+</style>
 </head>
 <body>
-    <div class="flex-container">
-            <article>
-                <h2>Article 1</h2>
-                <p>Konten artikel pertama...</p>
-            </article>
-            <article>
-                <h2>Article 2</h2>
-                <p>Konten artikel kedua...</p>
-            </article>
-            <article>
-                <h2>Article 3</h2>
-                <p>Konten artikel ketiga...</p>
-            </article>
-            <article>
-                <h2>Article 4</h2>
-                <p>Konten artikel keempat...</p>
-    </div>
+
+
+<div class="container">
+
+<div class="card">
+<h2>Hello World</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem cumque recusandae excepturi deleniti, necessitatibus repellat ab at dicta quia debitis, illo libero, vero magni suscipit veritatis. Laboriosam illum facere earum!</p>
+</div>
+
+<div class="card">
+<h2>Hello World</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem cumque recusandae excepturi deleniti, necessitatibus repellat ab at dicta quia debitis, illo libero, vero magni suscipit veritatis. Laboriosam illum facere earum!</p>
+</div>
+
+<div class="card">
+<h2>Hello World</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem cumque recusandae excepturi deleniti, necessitatibus repellat ab at dicta quia debitis, illo libero, vero magni suscipit veritatis. Laboriosam illum facere earum!</p>
+</div>
+
+<div class="card">
+<h2>Hello World</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem cumque recusandae excepturi deleniti, necessitatibus repellat ab at dicta quia debitis, illo libero, vero magni suscipit veritatis. Laboriosam illum facere earum!</p>
+</div>
+
+</div>
 </body>
 </html>
